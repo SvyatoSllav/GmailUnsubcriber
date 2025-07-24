@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FFFFFF; /* white */
+    --color-foreground: #2C3E50; /* dark blue-gray */
+    --color-border: #E9ECEF; /* light gray */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #FF6B6B; /* coral */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #2C3E50; /* dark blue-gray */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #2C3E50; /* dark blue-gray */
+    
+    /* Muted Colors */
+    --color-muted: #F8F9FA; /* light gray */
+    --color-muted-foreground: #6C757D; /* medium gray */
+    
+    /* Primary Colors */
+    --color-primary: #FF6B6B; /* coral */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #4A90E2; /* chrome blue */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #FFA726; /* orange */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* State Colors */
+    --color-destructive: #DC3545; /* red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    --color-success: #28A745; /* green */
+    --color-success-foreground: #FFFFFF; /* white */
+    --color-warning: #FF6B6B; /* coral - matches primary */
+    --color-warning-foreground: #FFFFFF; /* white */
+    --color-error: #DC3545; /* red */
+    --color-error-foreground: #FFFFFF; /* white */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+.btn-primary  {
+    @apply bg-primary text-primary-foreground transition-colors duration-250;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.15);
+  }
+.btn-secondary  {
+    @apply bg-secondary text-secondary-foreground transition-colors duration-250;
+  }
+  
+  .card-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .transition-smooth {
+    @apply transition-all duration-250 ease-out;
+  }
+}
